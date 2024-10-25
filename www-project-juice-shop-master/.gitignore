@@ -1,9 +1,0 @@
-__pycache__
-env
-.vscode
-.idea/
-*.iml
-.jekyll-metadata
-Gemfile.lock
-_site/
-.ruby-version
