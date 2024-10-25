@@ -1,0 +1,22 @@
+name: "Notify on changed attributions"
+
+on:
+  push:
+    branches: [ master ]
+    paths: 
+      - '_data/ow_attributions.json'
+
+jobs:
+  slackNotification:
+    name: Slack Notification
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_USERNAME: 'Donation Alert'
+          SLACK_ICON_EMOJI: ':money_with_wings:'
+          SLACK_FOOTER: ''
+          MSG_MINIMAL: commit,actions url
