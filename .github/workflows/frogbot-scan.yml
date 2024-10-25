@@ -19,9 +19,6 @@ jobs:
         branch: ["test-frogbot"]
     steps:
       - uses: jfrog/frogbot@v2
-        with:
-          # Specify the directory you want to scan
-          directory: www-project-juice-shop-master
         env:
           # [Mandatory]
           # JFrog platform URL
