@@ -1,2 +1,0 @@
-# Gemfile
-gem 'rails', '4.2.7.1' # Older Rails versions have known security vulnerabilities
